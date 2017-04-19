@@ -1,5 +1,5 @@
 # compiler to use
-CC = clang
+CC = gcc
 
 # flags to pass compiler
 CFLAGS = -ggdb3 -O0 -std=c11 -Wall -Werror
@@ -12,7 +12,7 @@ HDRS = types.h uiFunc.h brain.h uiFunc.h
 
 # space-separated list of libraries, if any,
 # each of which should be prefixed with -l
-LIBS =
+LIBS = -lm
 
 # space-separated list of source files
 SRCS = main.c brain.c uiFunc.c
@@ -22,11 +22,11 @@ OBJS = $(SRCS:.c=.o)
 
 
 # default target
-$(EXE): $(OBJS) $(HDRS) Makefile
+$(EXE): $(OBJS) $(HDRS) makefile
 	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
 
 # dependencies 
-$(OBJS): $(HDRS) Makefile
+$(OBJS): $(HDRS) makefile
 
 # housekeeping
 clean:

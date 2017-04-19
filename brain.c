@@ -46,7 +46,7 @@ Op known_operations[] =
     // exponent
     { "exp",  Unary,  .function.uFunc = &exp    },
     { "exp2", Unary,  .function.uFunc = &exp2   },
-    { "exp10",Unary,  .function.uFunc = &__exp10},
+    /* { "exp10",Unary,  .function.uFunc = &exp10  }, */
 
     // logarithm
     { "log",  Unary,  .function.uFunc = &log    },
