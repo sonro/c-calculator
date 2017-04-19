@@ -9,3 +9,4 @@ Topher Zero
     - Add history and make it user accessable
     - "clear" function to delete history
 
+#check
